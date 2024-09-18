@@ -93,6 +93,7 @@ resource "aws_instance" "instance" {
               yum install -y httpd
               systemctl start httpd
               systemctl enable httpd
+              yum install -y git
               EOF
 
   tags = {
