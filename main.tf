@@ -63,6 +63,13 @@ resource "aws_security_group" "my_security_group" {
     cidr_blocks = ["0.0.0.0/0"]  # Allows SSH from anywhere (adjust this in production)
   }
 
+  ingress {
+    from_port   = 80
+    to_port     = 80
+    protocol    = "tcp"
+    cidr_blocks = ["0.0.0.0/0"]  # Allows SSH from anywhere (adjust this in production)
+  }
+
   egress {
     from_port   = 0
     to_port     = 0
